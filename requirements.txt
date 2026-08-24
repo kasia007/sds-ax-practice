@@ -10,6 +10,7 @@ langchain-aws
 langchain-community
 langchain-classic
 langchain-text-splitters
+langchain-openai
 
 # RAG (2일차~)
 langchain-chroma
