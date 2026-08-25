@@ -8,6 +8,7 @@ https://ucanlabs.kr/classroom/sds-ax/lesson/1114/
 * git push origin day01-submit # 태그 push
 * 잠시 후 본인 리포의 해당 commit 페이지에 자동 코멘트로 제출 확인됨
 
+* py scripts/grade.py --day 2 
 
 ### 재제출
 
@@ -20,3 +21,5 @@ https://ucanlabs.kr/classroom/sds-ax/lesson/1114/
 
 
 https://ucanlabs.kr/classroom/sds-ax/lesson/1142/
+
+
