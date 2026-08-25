@@ -17,3 +17,6 @@ git commit --allow-empty -m "day1 재제출"
 git push
 git tag -f day01-submit # 태그를 새 커밋으로 강제 이동
 git push origin day01-submit -f # 원격 태그 강제 갱신
+
+
+https://ucanlabs.kr/classroom/sds-ax/lesson/1142/
