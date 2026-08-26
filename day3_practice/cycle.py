@@ -39,7 +39,7 @@ def generate(state: QualityState) -> dict:
 
 def check_quality(state: QualityState) -> dict:
     """품질 평가. 실습용으로 단순하게 길이 기반 점수를 씁니다 (200자면 만점)."""
-    score = min(len(state["answer"]) / 200, 1.0)
+    score = min(len(state["answer"]) / 8000, 1.0)
     return {"quality_score": score}
 
 

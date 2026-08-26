@@ -70,5 +70,5 @@ for text in ["오늘 사내 식당 메뉴 뭐야?", "와 배포가 한 번에 �
 
     # 구조 시각화: PNG 저장이 안 되는 환경도 있으므로 try/except로 감쌉니다
 
-from draw_mermaid import draw
+from common.draw_mermaid import draw
 draw(graph, 'contional')
