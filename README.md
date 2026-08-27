@@ -2,11 +2,11 @@ https://ucanlabs.kr/classroom/sds-ax/lesson/1114/
 
 ### 실습 코드 완성
 
-git add {변경한 파일들}
-git commit -m "day1 완료" # 커밋 메시지는 자유
+git add .
+git commit -m "day3 완료" # 커밋 메시지는 자유
 git push # 커밋 push
-git tag day02-submit # 태그 붙임
-git push origin day02-submit # 태그 push
+git tag day03-submit # 태그 붙임
+git push origin day03-submit # 태그 push
 
 * 잠시 후 본인 리포의 해당 commit 페이지에 자동 코멘트로 제출 확인됨
 
