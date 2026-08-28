@@ -3,14 +3,14 @@ https://ucanlabs.kr/classroom/sds-ax/lesson/1114/
 ### 실습 코드 완성
 
 git add .
-git commit -m "day3 완료" # 커밋 메시지는 자유
+git commit -m "day4 완료" # 커밋 메시지는 자유
 git push # 커밋 push
-git tag day03-submit # 태그 붙임
-git push origin day03-submit # 태그 push
+git tag day04-submit # 태그 붙임
+git push origin day04-submit # 태그 push
 
 * 잠시 후 본인 리포의 해당 commit 페이지에 자동 코멘트로 제출 확인됨
 
-py scripts/grade.py --day 2 
+py scripts/grade.py --day 4
 
 ### 재제출
 
