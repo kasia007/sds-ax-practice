@@ -3,7 +3,7 @@ https://ucanlabs.kr/classroom/sds-ax/lesson/1114/
 ### 실습 코드 완성
 
 git add .
-git commit -m "day4 완료" # 커밋 메시지는 자유
+git commit -m "day5 완료" # 커밋 메시지는 자유
 git push # 커밋 push
 git tag day05-submit # 태그 붙임
 git push origin day05-submit # 태그 push
