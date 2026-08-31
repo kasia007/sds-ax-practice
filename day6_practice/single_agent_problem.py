@@ -48,9 +48,10 @@ def send_message(channel: str, msg: str) -> str:
     """사내 메신저로 메시지를 발송한다."""
     return f"[메신저] {channel}: {msg}"
 
-ALL_TOOLS = [retrieve_docs, search_budget_policy, search_employees,
-             search_expenses, search_projects, search_assets,
-             write_report, send_message]
+# ALL_TOOLS = [retrieve_docs, search_budget_policy, search_employees,
+#              search_expenses, search_projects, search_assets,
+#              write_report, send_message]
+ALL_TOOLS = [retrieve_docs,  search_projects]
 
 llm = ChatBedrockConverse(
     model="us.anthropic.claude-sonnet-4-5-20250929-v1:0",
