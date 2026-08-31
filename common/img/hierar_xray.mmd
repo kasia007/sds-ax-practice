@@ -1,0 +1,107 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	__end__([<p>__end__</p>]):::last
+	__start__ --> supervisor\3a__start__;
+	analysis_team\3a__end__ --> supervisor\3a__start__;
+	research_team\3a__end__ --> supervisor\3a__start__;
+	supervisor\3a__end__ -.-> __end__;
+	supervisor\3a__end__ -.-> analysis_team\3a__start__;
+	supervisor\3a__end__ -.-> research_team\3a__start__;
+	subgraph supervisor
+	supervisor\3a__start__(<p>__start__</p>)
+	supervisor\3aagent(agent)
+	supervisor\3atools(tools)
+	supervisor\3a__end__(<p>__end__</p>)
+	supervisor\3a__start__ --> supervisor\3aagent;
+	supervisor\3aagent -.-> supervisor\3a__end__;
+	supervisor\3aagent -.-> supervisor\3atools;
+	supervisor\3atools --> supervisor\3aagent;
+	end
+	subgraph research_team
+	research_team\3a__start__(<p>__start__</p>)
+	research_team\3a__end__(<p>__end__</p>)
+	research_team\3a__start__ --> research_team\3aresearch_lead\3a__start__;
+	research_team\3adata_agent\3a__end__ --> research_team\3aresearch_lead\3a__start__;
+	research_team\3aresearch_agent\3a__end__ --> research_team\3aresearch_lead\3a__start__;
+	research_team\3aresearch_lead\3a__end__ -.-> research_team\3a__end__;
+	research_team\3aresearch_lead\3a__end__ -.-> research_team\3adata_agent\3a__start__;
+	research_team\3aresearch_lead\3a__end__ -.-> research_team\3aresearch_agent\3a__start__;
+	subgraph research_lead
+	research_team\3aresearch_lead\3a__start__(<p>__start__</p>)
+	research_team\3aresearch_lead\3aagent(agent)
+	research_team\3aresearch_lead\3atools(tools)
+	research_team\3aresearch_lead\3a__end__(<p>__end__</p>)
+	research_team\3aresearch_lead\3a__start__ --> research_team\3aresearch_lead\3aagent;
+	research_team\3aresearch_lead\3aagent -.-> research_team\3aresearch_lead\3a__end__;
+	research_team\3aresearch_lead\3aagent -.-> research_team\3aresearch_lead\3atools;
+	research_team\3aresearch_lead\3atools --> research_team\3aresearch_lead\3aagent;
+	end
+	subgraph research_agent
+	research_team\3aresearch_agent\3a__start__(<p>__start__</p>)
+	research_team\3aresearch_agent\3amodel(model)
+	research_team\3aresearch_agent\3atools(tools)
+	research_team\3aresearch_agent\3a__end__(<p>__end__</p>)
+	research_team\3aresearch_agent\3a__start__ --> research_team\3aresearch_agent\3amodel;
+	research_team\3aresearch_agent\3amodel -.-> research_team\3aresearch_agent\3a__end__;
+	research_team\3aresearch_agent\3amodel -.-> research_team\3aresearch_agent\3atools;
+	research_team\3aresearch_agent\3atools -.-> research_team\3aresearch_agent\3amodel;
+	end
+	subgraph data_agent
+	research_team\3adata_agent\3a__start__(<p>__start__</p>)
+	research_team\3adata_agent\3amodel(model)
+	research_team\3adata_agent\3atools(tools)
+	research_team\3adata_agent\3a__end__(<p>__end__</p>)
+	research_team\3adata_agent\3a__start__ --> research_team\3adata_agent\3amodel;
+	research_team\3adata_agent\3amodel -.-> research_team\3adata_agent\3a__end__;
+	research_team\3adata_agent\3amodel -.-> research_team\3adata_agent\3atools;
+	research_team\3adata_agent\3atools -.-> research_team\3adata_agent\3amodel;
+	end
+	end
+	subgraph analysis_team
+	analysis_team\3a__start__(<p>__start__</p>)
+	analysis_team\3a__end__(<p>__end__</p>)
+	analysis_team\3a__start__ --> analysis_team\3aanalysis_lead\3a__start__;
+	analysis_team\3aanalysis_lead\3a__end__ -.-> analysis_team\3a__end__;
+	analysis_team\3aanalysis_lead\3a__end__ -.-> analysis_team\3aanalyst_agent\3a__start__;
+	analysis_team\3aanalysis_lead\3a__end__ -.-> analysis_team\3areport_agent\3a__start__;
+	analysis_team\3aanalyst_agent\3a__end__ --> analysis_team\3aanalysis_lead\3a__start__;
+	analysis_team\3areport_agent\3a__end__ --> analysis_team\3aanalysis_lead\3a__start__;
+	subgraph analysis_lead
+	analysis_team\3aanalysis_lead\3a__start__(<p>__start__</p>)
+	analysis_team\3aanalysis_lead\3aagent(agent)
+	analysis_team\3aanalysis_lead\3atools(tools)
+	analysis_team\3aanalysis_lead\3a__end__(<p>__end__</p>)
+	analysis_team\3aanalysis_lead\3a__start__ --> analysis_team\3aanalysis_lead\3aagent;
+	analysis_team\3aanalysis_lead\3aagent -.-> analysis_team\3aanalysis_lead\3a__end__;
+	analysis_team\3aanalysis_lead\3aagent -.-> analysis_team\3aanalysis_lead\3atools;
+	analysis_team\3aanalysis_lead\3atools --> analysis_team\3aanalysis_lead\3aagent;
+	end
+	subgraph analyst_agent
+	analysis_team\3aanalyst_agent\3a__start__(<p>__start__</p>)
+	analysis_team\3aanalyst_agent\3amodel(model)
+	analysis_team\3aanalyst_agent\3atools(tools)
+	analysis_team\3aanalyst_agent\3a__end__(<p>__end__</p>)
+	analysis_team\3aanalyst_agent\3a__start__ --> analysis_team\3aanalyst_agent\3amodel;
+	analysis_team\3aanalyst_agent\3amodel -.-> analysis_team\3aanalyst_agent\3a__end__;
+	analysis_team\3aanalyst_agent\3amodel -.-> analysis_team\3aanalyst_agent\3atools;
+	analysis_team\3aanalyst_agent\3atools -.-> analysis_team\3aanalyst_agent\3amodel;
+	end
+	subgraph report_agent
+	analysis_team\3areport_agent\3a__start__(<p>__start__</p>)
+	analysis_team\3areport_agent\3amodel(model)
+	analysis_team\3areport_agent\3atools(tools)
+	analysis_team\3areport_agent\3a__end__(<p>__end__</p>)
+	analysis_team\3areport_agent\3a__start__ --> analysis_team\3areport_agent\3amodel;
+	analysis_team\3areport_agent\3amodel -.-> analysis_team\3areport_agent\3a__end__;
+	analysis_team\3areport_agent\3amodel -.-> analysis_team\3areport_agent\3atools;
+	analysis_team\3areport_agent\3atools -.-> analysis_team\3areport_agent\3amodel;
+	end
+	end
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
